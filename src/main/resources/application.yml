@@ -1,0 +1,24 @@
+spring:
+   application:
+      name: spring-boot-web
+      
+   datasource:
+      driverClassName: org.h2.Driver
+      url: jdbc:h2:~/db/springbootweb
+      username: sa
+      password: 
+      
+   liquibase:
+      change-log: classpath:/db/changelog/db.changelog-master.xml
+      
+   jpa:
+      show-sql: true
+      hibernate:
+         ddl-auto: update
+         
+   h2:
+      console:
+         enabled: true
+      
+server:
+   port: 9000
